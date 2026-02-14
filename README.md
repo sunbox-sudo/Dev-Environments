@@ -1,2 +1,3 @@
 # .dotfiles
-My .dotfiels
+My Dev Enviormnt
+That i use for my computers
