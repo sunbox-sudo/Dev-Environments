@@ -1,0 +1,7 @@
+!/usr/bin/env bash
+
+# update syteam, apps, packages, and clean up
+pacman -Syu --noconfirm
+
+# uppdate dotfiles
+

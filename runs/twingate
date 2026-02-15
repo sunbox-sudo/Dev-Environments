@@ -1,0 +1,26 @@
+!/usr/bin/env bash
+summary "Installing twingate client"
+
+# twingate 
+curl https://binaries.twingate.com/client/linux/ARCH/x86_64/stable/twingate-amd64.pkg.tar.zst --output twingate.pkg.tar.zst
+pacman -Syy
+pacman -U --noconfirm twingate.pkg.tar.zst
+
+# Get Twingate credentials from user input
+read -rs -p "Enter Twingate network name: " TWINGATE_NETWORK_NAME
+echo
+read -rs -p "Enter Twingate access token: " TWINGATE_ACCESS_TOKEN
+echo
+read -rs -p "Enter Twingate refresh token: " TWINGATE_REFRESH_TOKEN
+echo
+
+# Check if credentials are provided
+
+# Configure Twingate client with provided credentials
+towngate setup \
+    --network-name "$TWINGATE_NETWORK_NAME" \
+    --access-token "$TWINGATE_ACCESS_TOKEN" \
+    --refresh-token "$TWINGATE_REFRESH_TOKEN"
+
+# Start Twingate client
+twingate status
