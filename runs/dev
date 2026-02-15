@@ -5,3 +5,7 @@ pacman -Syu --noconfirm
 
 # uppdate dotfiles
 
+cd $HOME/dev/.dotfiles
+git pull origin main
+
+stow -t $HOME .
