@@ -1,0 +1,5 @@
+[user]
+	name = Linus Nilsson
+	email = Sunbox@sunboxx.dev
+[init]
+	defaultBranch = main
