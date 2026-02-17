@@ -6,8 +6,11 @@ execPath=$(pwd)
 sudo pacman -Syu --noconfirm
 
 # Updates app/packages
-sudo pacman -S -noconfirm --needed git curl
-
+sudo pacman -S --noconfirm --needed git
+sudo pacman -S --noconfirm --needed spotify-launcher
+sudo pacman -S --noconfirm --needed curl
+sudo pacman -S --noconfirm --needed discord
+sudo pacman -S --noconfirm --needed kitty 
 # uppdate dotfiles
 
 cd $HOME/dev/.dotfiles
