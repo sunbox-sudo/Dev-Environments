@@ -13,6 +13,9 @@ sudo pacman -S --noconfirm --needed discord
 sudo pacman -S --noconfirm --needed kitty 
 sudo pacman -S --noconfirm --needed xclip
 sudo pacman -S --noconfirm --needed maim 
+sudo pacman -S --noconfirm --needed fastfetch
+sudo pacman -S --noconfirm --needed qutebrowser  
+
 # uppdate dotfiles
 
 cd $HOME/dev/.dotfiles
