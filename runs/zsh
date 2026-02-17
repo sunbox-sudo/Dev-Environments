@@ -1,29 +1,43 @@
 #!/usr/bin/env bash
 
-echo $SHELL
+execPath=$(pwd)
 
 # install zsh and plugins
+echo "Downloading shell and plugins"
 sudo pacman -S --noconfirm --needed zsh zsh-autosuggestions zsh-syntax-highlighting
 
 # Set zsh as defult shell
+echo "switching shell"
 pathToShell=$(which zsh)
 echo $pathToShell
 chsh -s $pathToShell
 
 # Install OMZ (oh-my-zsh)
-rm -rf $home/.oh-my.zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+echo "Instaling OMZ"
+rm -rf $HOME/.oh-my-zsh
+RUNZSH=no KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Install ppowerlevel10k (p10k)
+echo "Insatling p10k"
+rm -rf ~/.oh-my-zsh/custom/themes/powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
 
 # Install nerd fonts for p10k 
+echo "cd to dir"
 mkdir -p ~/.local/share/fonts
 cd ~/.local/share/fonts
 
 # Download the four MesloLGS NF font styles
+echo "sownlaoding fonts"
 curl -fLo "MesloLGS NF Regular.ttf" https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
 curl -fLo "MesloLGS NF Bold.ttf" https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf
 curl -fLo "MesloLGS NF Italic.ttf" https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf
 curl -fLo "MesloLGS NF Bold Italic.ttf" https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf
+
+# change back dir
+cd "$execPath"
+
+# start evrything
+exec zsh
+source ~/.zshrc
 
