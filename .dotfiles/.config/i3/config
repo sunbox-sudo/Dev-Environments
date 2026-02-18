@@ -147,8 +147,12 @@ bindsym $mod+0 workspace number $ws10
 # autostart apps 
 exec --no-startup-id i3-msg "workspace $ws1; exec kitty"
 exec --no-startup-id i3-msg "workspace $ws2; exec kitty"
-exec --no-startup-id i3-msg "workspace $ws3; exec qutebrowser --basedir ~/.local/share/qutebrowser-work"
-exec --no-startup-id i3-msg "workspace $ws4; exec qutebrowser --basedir ~/.local/share/qutebrowser-private"
+exec --no-startup-id i3-msg "workspace $ws3; exec qutebrowser \
+	--basedir ~/.local/share/qutebrowser-work" \
+	--config-py ~/.config/qutebrowser-work/config.py
+exec --no-startup-id i3-msg "workspace $ws4; exec qutebrowser \
+	--basedir ~/.local/share/qutebrowser-private" \
+	--config-py ~/.config/qutebrowser-private/config.py
 exec --no-startup-id i3-msg "workspace $ws5; exec discord"
 exec --no-startup-id i3-msg "workspace $ws7; exec spotify-launcher"
 

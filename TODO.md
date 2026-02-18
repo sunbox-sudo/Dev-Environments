@@ -19,3 +19,7 @@ bascliy copy this [LINK](https://github.com/ThePrimeagen/init.lua/blob/22d0d31cf
 ## fastfetch
 - animation ascii art
 
+## more
+- Fix Emojis 
+    - dowload emojis
+
