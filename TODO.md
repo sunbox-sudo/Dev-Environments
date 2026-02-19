@@ -23,3 +23,9 @@ bascliy copy this [LINK](https://github.com/ThePrimeagen/init.lua/blob/22d0d31cf
 - Fix Emojis 
     - dowload emojis
 
+## Qutebrowser 
+- open ayomaticly 2 profiles
+
+## i3 
+- Get i3 to sort right on  boots
+
