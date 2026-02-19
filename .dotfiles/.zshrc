@@ -114,4 +114,11 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # run fastfetch when launched 
-fastfetch
+if [[ -o interactive && -n "$KITTY_PID" ]]; then
+  autoload -Uz add-zsh-hook
+  run_fastfetch_once() {
+    fastfetch
+    add-zsh-hook -d precmd run_fastfetch_once
+  }
+  add-zsh-hook precmd run_fastfetch_once
+fi
