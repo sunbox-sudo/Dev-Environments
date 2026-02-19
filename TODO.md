@@ -13,9 +13,6 @@ bascliy copy this [LINK](https://github.com/ThePrimeagen/init.lua/blob/22d0d31cf
 ## Steam 
 - install script based of arch wiki
 
-## zsh 
-- run fastfetch when open kitty 
-
 ## fastfetch
 - animation ascii art
 
