@@ -14,6 +14,7 @@ bascliy copy this [LINK](https://github.com/ThePrimeagen/init.lua/blob/22d0d31cf
 - install script based of arch wiki
 
 ## fastfetch
+- fix fastfetxh to exute better
 - animation ascii art
 
 ## Qutebrowser 
@@ -21,4 +22,5 @@ bascliy copy this [LINK](https://github.com/ThePrimeagen/init.lua/blob/22d0d31cf
 
 ## i3 
 - Get i3 to sort right on  boots
-
+- Fix i3-bar 
+- Costumize backfound mm
