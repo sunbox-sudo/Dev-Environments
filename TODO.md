@@ -24,3 +24,6 @@ bascliy copy this [LINK](https://github.com/ThePrimeagen/init.lua/blob/22d0d31cf
 - Get i3 to sort right on  boots
 - Fix i3-bar 
 - Costumize backfound mm
+
+## keyboard 
+- switch numpad , to .
