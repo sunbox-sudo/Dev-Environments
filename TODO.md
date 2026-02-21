@@ -27,3 +27,4 @@ bascliy copy this [LINK](https://github.com/ThePrimeagen/init.lua/blob/22d0d31cf
 
 ## keyboard 
 - switch numpad , to .
+- remap caps to something more useful
