@@ -3,3 +3,5 @@
 	email = Sunbox@sunboxx.dev
 [init]
 	defaultBranch = main
+[core]
+	editor = vim

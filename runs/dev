@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 execPath=$(pwd)
+isDebugMode=false
 
 # update syteam
 sudo pacman -Syu --noconfirm
@@ -16,12 +17,18 @@ sudo pacman -S --noconfirm --needed maim
 sudo pacman -S --noconfirm --needed fastfetch
 sudo pacman -S --noconfirm --needed qutebrowser  
 sudo pacman -S --noconfirm --needed noto-fonts-emoji  
+sudo pacman -S --noconfirm --needed eza 
 
 # uppdate dotfiles
 
-cd $HOME/dev/.dotfiles
+cd $HOME/.dev/.dotfiles
 git pull origin main
 
-stow -t $HOME .
+stow -D -t $HOME .
+
+if [ "$isDebugMode" = true ] ; then
+	eza -a 
+fi
+stow -t $HOME ./
 
 cd "$execPath"
