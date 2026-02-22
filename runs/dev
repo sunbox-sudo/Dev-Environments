@@ -2,9 +2,16 @@
 
 execPath=$(pwd)
 isDebugMode=false
+wantedTimezone="Europe/Stockholm"
 
 # update syteam
 sudo pacman -Syu --noconfirm
+
+# Change timecone if needed
+_currentTimezone=$(timedatectl show --property=Timezone --value)
+if ["$_currentTimezone" = "$wantedTimezone"] ; then
+	timedatectl set-timezone "$wantedTimezone" 
+fi
 
 # Updates app/packages
 sudo pacman -S --noconfirm --needed git
